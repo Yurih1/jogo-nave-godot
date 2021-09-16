@@ -7,7 +7,7 @@
 
 # How to play
 
-* Para usar sua nave, utilizar as setas do teclando e a barra de espaço para atirar;
+* Para usar sua nave, utilizar as setas do teclado e a barra de espaço para atirar;
 * As três naves no canto superior esquerdo indicam a quantidade de vida;
 * Você só irá perder suas vidas se a sua nave (*nave azul*) se chocar com as adversárias (*naves vermelhas*);
 * Após perder as três, jogo finaliza com uma mensagem de *game over*;
