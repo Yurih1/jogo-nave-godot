@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script_disparo.gd" type="Script" id=1]
+[ext_resource path="res://PixelSpaceRage/256px/Minigun_Medium_png_processed.png" type="Texture" id=2]
+[ext_resource path="res://PixelSpaceRage/256px/Minigun_Small_png_processed.png" type="Texture" id=3]
+[ext_resource path="res://PixelSpaceRage/256px/Minigun_Large_png_processed.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "disparo",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4.54536, 12.7553 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 533.387, 556.759 )
+scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
+frames = SubResource( 1 )
+animation = "disparo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
